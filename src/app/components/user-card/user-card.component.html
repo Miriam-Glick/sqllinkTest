@@ -1,0 +1,29 @@
+<!-- 
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+     
+    </mat-card-header>
+     <img mat-card-image src={{user.personalDetails.avatar}} alt="Photo of a Shiba Inu"> -->
+    <!-- <mat-card-content>
+      <p>
+       <span> Name : {{user.personalDetails.name}}</span>
+       <span>Team {{user.personalDetails.Team}}</span>
+       <span>JoinedAt {{user.personalDetails.joinedAt}}</span>
+    </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card> --> 
+  <div *ngIf="user" class="userDetails">
+    <div>Name: {{user.personalDetails.name}}</div>
+    <div>Team: {{user.personalDetails.Team}}</div>
+    <div>JoinedAt: {{user.personalDetails.joinedAt }}</div>
+    <div>
+        <div>avatar: </div>
+         <img src={{user.personalDetails.avatar}} style="width: 50px;">
+    </div>
+</div>
+<br />
