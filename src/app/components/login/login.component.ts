@@ -45,9 +45,9 @@ export class LoginComponent {
   }
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern('/[a-zA-Z0-9]/')]],
       password: ['', [Validators.required, Validators.minLength(6),
-      Validators.maxLength(10)
+      Validators.maxLength(10),createPasswordStrengthValidator(), Validators.pattern('/[a-zA-Z0-9]/')
       ]]
     });
   }
